@@ -15,7 +15,7 @@ export function SignInPage(): JSX.Element {
       clientId={import.meta.env.MEDPLUM_CLIENT_ID}
     >
       <Logo size={32} />
-      <Title>Sign in to Medplum</Title>
+      <Title>Medplum Large Chart Demo</Title>
     </SignInForm>
   );
 }

@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: Copyright Orangebot, Inc. and Medplum contributors
 // SPDX-License-Identifier: Apache-2.0
-import { Anchor, Button, Stack, Text, Title } from '@mantine/core';
+import { Button, Stack, Text, Title } from '@mantine/core';
 import { Document } from '@medplum/react';
 import type { JSX } from 'react';
 import { Link } from 'react-router';
@@ -9,12 +9,8 @@ export function LandingPage(): JSX.Element {
   return (
     <Document width={500}>
       <Stack align="center">
-        <Title order={2}>Welcome!</Title>
-        <Text>
-          This "Hello World" example demonstrates how to build a simple React application that fetches Patient data from
-          Medplum. If you haven't already done so, <Anchor href="https://app.medplum.com/register">register</Anchor> for
-          Medplum Project. After that you can sign into your project by clicking the link below.
-        </Text>
+        <Title order={1}>Medplum Large Chart Demo</Title>
+        <Text c="dimmed">Sign in to start building against your Medplum project.</Text>
         <Button component={Link} to="/signin">
           Sign in
         </Button>
