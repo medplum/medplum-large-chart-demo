@@ -4,14 +4,6 @@
 
 If you haven't already done so, follow the instructions in [this tutorial](https://www.medplum.com/docs/tutorials/register) to register a Medplum project to store your data.
 
-If you want to change any environment variables from the defaults, copy the `.env.defaults` file to `.env`
-
-```bash
-cp .env.defaults .env
-```
-
-And make the changes you need.
-
 Next, install the dependencies
 
 ```bash
@@ -51,15 +43,7 @@ The recent-first strategy is the one that matters in practice. A doctor shouldn'
 
 ### Results
 
-<div className="responsive-iframe-wrapper">
-  <iframe
-    src="https://www.youtube.com/embed/rdhEx6T8Qu0"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</div>
+https://github.com/user-attachments/assets/9b19cb7f-4ab4-4d40-8475-5f320d1c49b5
 
 The full, unmitigated 131,000-resource chart downloaded into the browser in about five seconds. That's not a backend microbenchmark — it's a React app pulling the whole thing over the wire, progress bar and all. With progressive loading, the critical data was on screen in a fraction of that time.
 
