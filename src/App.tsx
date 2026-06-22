@@ -1,11 +1,12 @@
 // SPDX-FileCopyrightText: Copyright Orangebot, Inc. and Medplum contributors
 // SPDX-License-Identifier: Apache-2.0
-import { Button, Stack, Text, Title } from '@mantine/core';
-import { AppShell, Document, ErrorBoundary, Loading, Logo, useMedplum, useMedplumProfile } from '@medplum/react';
+import { AppShell, ErrorBoundary, Loading, Logo, useMedplum, useMedplumProfile } from '@medplum/react';
 import { Suspense } from 'react';
 import type { JSX } from 'react';
-import { Link, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
+import { HomePage } from './pages/HomePage';
 import { LandingPage } from './pages/LandingPage';
+import { PatientDownloadPage } from './pages/PatientDownloadPage';
 import { SignInPage } from './pages/SignInPage';
 
 export function App(): JSX.Element | null {
@@ -23,23 +24,10 @@ export function App(): JSX.Element | null {
           <Routes>
             <Route path="/" element={profile ? <HomePage /> : <LandingPage />} />
             <Route path="/signin" element={<SignInPage />} />
+            <Route path="/demo/:mode/Patient/:id" element={profile ? <PatientDownloadPage /> : <LandingPage />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>
     </AppShell>
-  );
-}
-
-function HomePage(): JSX.Element {
-  return (
-    <Document width={600}>
-      <Stack>
-        <Title order={1}>Medplum Large Chart Demo</Title>
-        <Text c="dimmed">Authenticated Medplum app shell is ready for the large chart demo.</Text>
-        <Button component={Link} to="/signin" variant="light">
-          Switch account
-        </Button>
-      </Stack>
-    </Document>
   );
 }
